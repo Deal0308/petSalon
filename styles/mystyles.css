@@ -1,0 +1,42 @@
+/* global */
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary:#99582a;
+    --secondary:#bb9457;
+    --secondary2:#6f1d1b;
+
+
+}
+body{
+    background-color: var(--primary);
+}
+p{
+    line-height: 2;
+}
+
+/* utilities */
+.grid-two-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: flex-start;
+}
+/* header */
+.site-header{
+    background-color: var(--secondary);
+    height: 15rem;
+}
+
+/* menu */
+menu{
+    background-color: var(--primary);
+}
+/* main */
+.img-container{
+    background-color: var(--secondary2);
+}
+.img-container img{
+    border-radius: 50%;
+}
