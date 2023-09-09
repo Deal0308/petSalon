@@ -36,6 +36,7 @@ menu{
 /* main */
 .img-container{
     background-color: var(--secondary2);
+    border-radius: 50%;
 }
 .img-container img{
     border-radius: 50%;
@@ -47,4 +48,9 @@ menu{
 }
 #petNames{
     color: #6f1d1b;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
 }
