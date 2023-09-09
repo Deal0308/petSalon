@@ -28,6 +28,14 @@ let salon = {
         }
     ]
 }
-for(let i=0; i<salon.pets.lengths; i++){
-    console.log(salon.pets[2].name);
+function displayPets() {
+    let petNames = '';
+    for (let i = 0; i < pets.length; i++) {
+        petNames += pets[i].name + '<br>';
+    }
+
+    document.getElementById('petNames').innerHTML = petNames;
+    document.getElementById('petCount').innerHTML = 'Number of pets: ' + pets.length;
 }
+
+window.onload = displayPets;

@@ -40,3 +40,11 @@ menu{
 .img-container img{
     border-radius: 50%;
 }
+#petCount{
+    font-weight: bold;
+    color: #99582a;
+    margin-bottom: 20px;
+}
+#petNames{
+    color: #6f1d1b;
+}
