@@ -12,9 +12,34 @@
 }
 body{
     background-color: var(--primary);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+    line-height: 1.5;
+    
+
 }
 p{
     line-height: 2;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+
 }
 
 /* utilities */
@@ -22,29 +47,95 @@ p{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: flex-start;
+    align-items: center;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
 }
 /* header */
 .site-header{
     background-color: var(--secondary);
     height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+
 }
 
 /* menu */
 menu{
     background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+
+
+
 }
 /* main */
+p{
+    line-height: 2;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: black;
+}
 .img-container{
     background-color: var(--secondary2);
     border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    margin: 20px;
 }
 .img-container img{
     border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
 }
 #petCount{
     font-weight: bold;
     color: #99582a;
     margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+
 }
 #petNames{
     color: #6f1d1b;
@@ -53,4 +144,8 @@ menu{
     font-size: 20px;
     text-align: center;
     line-height: 2;
+    font-weight: 400;
+    font-style: normal;
+
+
 }
