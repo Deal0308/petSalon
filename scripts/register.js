@@ -8,21 +8,28 @@ let salon = {
         number: "12345"
     },
     pets:[]
+    
 }
+let x=0;
+
 //constructor
-function Pet(name,age,breed,service,type){
+function Pet(name,age,breed,service,type,payment){
     this.name = name;
     this.age = age;
     this.breed = breed;
     this.service = service;
     this.type = type;
+    this.payment = payment;
+    this.id=x++;
 }   
 //inputs
 const inputName = document.getElementById("txtName");
 const inputAge = document.getElementById("txtAge");
 const inputBreed = document.getElementById("txtBreed");
-const inputService = document.getElementById("txtService");
 const inputType = document.getElementById("txtType");
+const inputService = document.getElementById("txtService");
+const inputPayment = document.getElementById("txtPayment");
+
 
 function isValid(aPet){
     let validation = true;//assuming everything is valid
@@ -31,6 +38,7 @@ function isValid(aPet){
     inputAge.classList.remove("alert-error");
     inputBreed.classList.remove("alert-error");
     inputType.classList.remove("alert-error");
+    inputPayment.classList.remove("alert-error");
     if(aPet.name == ""){
         validation = false;
         inputName.classList.add("alert-error");
@@ -42,18 +50,19 @@ function isValid(aPet){
     return validation;
 }
 //buttons
-const btnRegister = document.getElementById("btnRegister");
-btn
-btnRegister.addEventListener("click",register);
+
+
+
+
 
 
 function register(){
     //get the values from the form
     console.log(inputName.value);
-    let newPet = new Pet(inputName.value,inputAge.value,inputBreed.value,inputService.value,inputType.value);
+    let newPet = new Pet(inputName.value,inputAge.value,inputBreed.value,inputService.value,inputType.value,inputPayment.value);
     if (isValid(newPet)==true){
         salon.pets.push(newPet);
-        displayCards();
+        displayTable();
         clearInputs();
         
 
@@ -66,21 +75,46 @@ function clearInputs(){
     inputName.value = "";
     inputAge.value = "";
     inputBreed.value = "";
+    inputType.value = "";
     inputService.value = "";
+    inputPayment.value = "";
+    
 
+}
+function deletePet(petID){
+    let deleteIndex;
+    for(let i=0;i<salon.pets.length;i++){
+        let pet = salon.pets[i];
+        if(petID==pet.id){
+        deleteIndex = i;//position of the pet
+        }
+    }
+    salon.pets.splice(deleteIndex,1);//delete the pet from the array
+document.getElementById(petID).remove();
 
-
-
+}
+function search(){
+    let inputSearch = document.getElementById("txtSearch").value;
+    for(let i=0;i<salon.pets.length;i++){
+        let pet = salon.pets[i];
+        if(inputSearch.toLowerCase()==pet.name.toLowerCase()){
+            document.getElementById(pet.id).classList.add("alert-search");
+        }else{
+            document.getElementById(pet.id).classList.remove("alert-error");
+        }
+    
+    }
 }
 function init(){
     
-    let pet1 =new Pet("Scooby",60,"Dane","Grooming");
-    let pet2=new Pet("Buddy",30,"Bulldog","Nail Trimming");
-    let pet3=new Pet("Lucky",20,"Mastiff","Vaccines");
+    let pet1 =new Pet("Scooby",60,"Dane","Dog","Grooming","Cash");
+    let pet2=new Pet("Buddy",30,"Calico","Cat","Nail Trimming","Cash");
+    let pet3=new Pet("Lucky",20,"Mastiff","Dog","Vaccines","Cash");
 
     
     salon.pets.push(pet1,pet2,pet3);//add objects into salon array
-    displayCards()
+    displayTable();
+
 
 
 
