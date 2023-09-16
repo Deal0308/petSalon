@@ -47,6 +47,17 @@
                     <option value="vaccines">Vaccines 💉 </option>
             </select>
             </div>
+            <div class="mb-3">
+                <label class="form-label"></label>Payment Method:</label>
+                <select class="form-select" id="txtPayment">
+                    <option value="" selected disabled>--Select a Payment Method--</option>
+                    <option value="cash">Cash</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                </select>
+            <div class="mb-3">
+                <label class="form-label"></label>Phone Number:</label>
+                <input type="text" class="form-control" id="txtPhone">
             
             </div>
                 <button class="btn btn-info" onclick="register()">Register</button>
@@ -68,6 +79,7 @@
                     <th>Type</th>
                     <th>Service</th>
                     <th>Payment</th>
+                    <th>Phone Number</th>
                     <th>Actions</th>
                 </thead>
                 <tbody id="petTable">

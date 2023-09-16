@@ -13,13 +13,14 @@ let salon = {
 let x=0;
 
 //constructor
-function Pet(name,age,breed,service,type,payment){
+function Pet(name,age,breed,service,type,payment,phone,){
     this.name = name;
     this.age = age;
     this.breed = breed;
     this.service = service;
     this.type = type;
     this.payment = payment;
+    this.phone = phone;
     this.id=x++;
 }   
 //inputs
@@ -29,6 +30,7 @@ const inputBreed = document.getElementById("txtBreed");
 const inputType = document.getElementById("txtType");
 const inputService = document.getElementById("txtService");
 const inputPayment = document.getElementById("txtPayment");
+const inputPhone = document.getElementById("txtPhone");
 
 
 function isValid(aPet){
@@ -39,6 +41,7 @@ function isValid(aPet){
     inputBreed.classList.remove("alert-error");
     inputType.classList.remove("alert-error");
     inputPayment.classList.remove("alert-error");
+    inputPhone.classList.remove("alert-error");
     if(aPet.name == ""){
         validation = false;
         inputName.classList.add("alert-error");
@@ -59,7 +62,7 @@ function isValid(aPet){
 function register(){
     //get the values from the form
     console.log(inputName.value);
-    let newPet = new Pet(inputName.value,inputAge.value,inputBreed.value,inputService.value,inputType.value,inputPayment.value);
+    let newPet = new Pet(inputName.value,inputAge.value,inputBreed.value,inputService.value,inputType.value,inputPayment.value,inputPhone.value);
     if (isValid(newPet)==true){
         salon.pets.push(newPet);
         displayTable();
@@ -78,6 +81,7 @@ function clearInputs(){
     inputType.value = "";
     inputService.value = "";
     inputPayment.value = "";
+    inputPhone.value = "";
     
 
 }
@@ -107,9 +111,9 @@ function search(){
 }
 function init(){
     
-    let pet1 =new Pet("Scooby",60,"Dane","Dog","Grooming","Cash");
-    let pet2=new Pet("Buddy",30,"Calico","Cat","Nail Trimming","Cash");
-    let pet3=new Pet("Lucky",20,"Mastiff","Dog","Vaccines","Cash");
+    let pet1 =new Pet("Scooby",60,"Dane","Grooming","Dog","Cash",555-555-5555);
+    let pet2=new Pet("Buddy",30,"Calico","Nail Trimming","Cat","Cash",555-555-5555);
+    let pet3=new Pet("Lucky",20,"Mastiff","Vaccines","Dog","Cash",555-555-5555);
 
     
     salon.pets.push(pet1,pet2,pet3);//add objects into salon array

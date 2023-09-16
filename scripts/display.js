@@ -7,11 +7,12 @@ function displayTable(){
         tr+=
         `<tr id="${pet.id}">
         <td>${pet.name}</td>
-        <td>${pet.breed}</td>
         <td>${pet.age}</td>
+        <td>${pet.breed}</td>
         <td>${pet.type}</td>
         <td>${pet.service}</td>
         <td>${pet.payment}</td>
+        <td>${pet.phone}</td>
         <td>
         <button onclick="deletePet(${pet.id})"><i class="fa-solid fa-trash"></i></button>
         </td>
@@ -20,6 +21,7 @@ function displayTable(){
 }
 
         //create the tmp string ** <div>${}</div>` +
+
 
         
     //insert into the HTML ** innerHTML
@@ -30,7 +32,9 @@ function displayTable(){
 
 
 
+
     //add the phone number attribute on the constructor **
+
 
 
     //clear the phone number input on the HTML **
@@ -38,4 +42,5 @@ function displayTable(){
     //add phone number property to the three pets we have
 
     //display the phone number input on the HTML **
+
 
