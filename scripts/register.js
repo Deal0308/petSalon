@@ -12,6 +12,7 @@ let salon = {
 }
 let x=0;
 
+
 //constructor
 function Pet(name,age,breed,service,type,payment,phone,){
     this.name = name;
